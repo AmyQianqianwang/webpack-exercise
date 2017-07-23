@@ -1,3 +1,9 @@
+#demo功能
+实现了html、css、js、ts、img的模块化管理。
+静态资源文件加hash，和自动替换。
+css的extract。
+浏览器对文件的热加载。
+
 #webpack
 webpack 1.x
 http://webpack.github.io/docs/
