@@ -12,7 +12,8 @@ webpack配置的写法上有更新，比如loaders的写法.
 从1.x版本到2.x版本的webpack配置文件的更新：
 https://doc.webpack-china.org/guides/migrating/
 
-#webpack四大核心：
+#webpack四大核心
+
 entry
 output
 plugin
@@ -34,6 +35,7 @@ npm config list
 
 
 #demo:
+
 简单demo从hello world开始：
 1.新建webpack.config.js的webpack的配置文件
 2.新建index.html。新建index.js，并在webpack.config.js中把entry配置为index.js(index.ts同理)
@@ -73,6 +75,7 @@ module.exports = config;
 </pre>
 
 #用express启node服务(配置在server.js中)：
+
 var express = require('express');//启动node服务
 var app = express();
 app.use('/hello', function(req, res, next){
@@ -84,6 +87,7 @@ app.listen(3000, function(){
 启动命令：node server.js
 
 #gulp demo
+
 npm install --global gulp
 npm install --save-dev gulp
 全局安装了gulp，项目也安装了gulp。全局安装gulp是为了执行gulp任务，本地安装gulp则是为了调用gulp插件的功能。
@@ -112,7 +116,7 @@ gulp.task('sass',function(){
 });</code>
 </pre>
              
-#gulp VS webpack:
+#gulp VS webpack
 
 1. Gulp侧重于前端开发的 整个过程 的控制管理（像是流水线），我们可以通过给gulp配置不通的task（通过Gulp中的gulp.task()方法配置，比如启动server、sass/less预编译、文件的合并压缩等等）来让gulp实现不同的功能，从而构建整个前端开发流程。
 
@@ -145,6 +149,7 @@ gulp.task('sass',function(){
 
 
 #angular、vue、react三大框架模块管理遵循的规范
+
 webpack打包成一个文件，一次都加载完，需要哪个就去执行哪个。不像传统的页面，引入很多文件，要一个个按顺序加载。
 生成的都是闭包，变量隔离，并能避免污染作用域。
 
@@ -154,6 +159,7 @@ vue,angularx,react加载内部模块时遵循commonjs ---> 打包成一个文件
 
 ------
 #模块化方式
+
 require是commonjs的模块化的方法，import是 es6的模块化方式，webpack的模块化，也是CommonJs规范。
 require和requirejs不一样，require是es5语法，引入一个模块。requirejs是引入js文件，类似seajs，都是模块化工具。和直接引入文件比，好处在于不污染作用域中的对象。也可以管理依赖关系。
 自己实现requirejs方法：可以用自执行的闭包实现。
@@ -166,6 +172,7 @@ require() 返回的是 module.exports 而不是 exports
 
 
 #js模块化的规范
+
 amd 和 cmd 和 commonjs
 
 amd --->requirejs
